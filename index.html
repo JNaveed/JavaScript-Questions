@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Async vs Sync JavaScript Demo</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Async vs Sync JavaScript Demo</h1>
+    <div class="container">
+      <div class="section">
+        <h2>Synchronous Examples</h2>
+        <button onclick="runSync1()">Sync Example 1</button>
+        <pre id="syncOutput1"></pre>
+        <button onclick="runSync2()">Sync Example 2</button>
+        <pre id="syncOutput2"></pre>
+        <button onclick="runSync3()">Sync Example 3</button>
+        <pre id="syncOutput3"></pre>
+        <button onclick="runSync4()">Sync Example 4</button>
+        <pre id="syncOutput4"></pre>
+        <button onclick="runSync5()">Sync Example 5</button>
+        <pre id="syncOutput5"></pre>
+        <hr />
+        <button onclick="printEvenOdd()">
+          Show Even and Odd Numbers (Sync)
+        </button>
+        <div style="margin-top: 15px">
+          <strong>Even Numbers (Sync):</strong>
+          <div id="evenOutputSync" style="color: blue"></div>
+          <strong>Odd Numbers (Sync):</strong>
+          <div id="oddOutputSync" style="color: green"></div>
+        </div>
+      </div>
+      <div class="section">
+        <h2>Asynchronous Examples</h2>
+        <button onclick="runAsync1()">Async Example 1</button>
+        <pre id="asyncOutput1"></pre>
+        <button onclick="runAsync2()">Async Example 2</button>
+        <pre id="asyncOutput2"></pre>
+        <button onclick="runAsync3()">Async Example 3</button>
+        <pre id="asyncOutput3"></pre>
+        <button onclick="runAsync4()">Async Example 4</button>
+        <pre id="asyncOutput4"></pre>
+        <button onclick="runAsync5()">Async Example 5</button>
+        <pre id="asyncOutput5"></pre>
+        <button onclick="printEvenOddAsync()">
+          Show Even and Odd Numbers (Async)
+        </button>
+        <div style="margin-top: 15px">
+          <strong>Even Numbers (Async):</strong>
+          <div id="evenOutputAsync" style="color: blue"></div>
+          <strong>Odd Numbers (Async):</strong>
+          <div id="oddOutputAsync" style="color: green"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div
+      class="bg-white p-8 rounded-2xl shadow-xl max-w-lg w-full text-center border border-gray-200"
+    >
+      <h1 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">
+        Separate Numbers by Index
+      </h1>
+      <p class="text-gray-600 mb-6">
+        Click the button to see the numbers separated by their even and odd
+        indices.
+      </p>
+
+      <button
+        onclick="displaySeparatedNumbers()"
+        class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg shadow-md transition-all duration-200 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
+      >
+        Separate Numbers
+      </button>
+
+      <div class="mt-8 text-left space-y-4">
+        <div>
+          <h3 class="font-semibold text-lg text-gray-800 mb-2">
+            Numbers at Even Indices:
+          </h3>
+          <p
+            id="evenIndices"
+            class="bg-gray-100 p-3 rounded-lg border border-gray-200 text-gray-700 font-mono overflow-auto"
+          ></p>
+        </div>
+        <div>
+          <h3 class="font-semibold text-lg text-gray-800 mb-2">
+            Numbers at Odd Indices:
+          </h3>
+          <p
+            id="oddIndices"
+            class="bg-gray-100 p-3 rounded-lg border border-gray-200 text-gray-700 font-mono overflow-auto"
+          ></p>
+        </div>
+      </div>
+    </div> -->
+
+    <div
+      class="bg-white p-8 rounded-2xl shadow-xl max-w-lg w-full text-center border border-gray-200"
+    >
+      <h1 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">
+        Separate Numbers by Index
+      </h1>
+      <p class="text-gray-600 mb-6">
+        Click the button to see the numbers separated by their even and odd
+        indices asynchronously.
+      </p>
+
+      <button
+        onclick="displaySeparatedNumbersAsync()"
+        class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg shadow-md transition-all duration-200 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
+      >
+        Separate Numbers Asynchronously
+      </button>
+
+      <div class="mt-8 text-left space-y-4">
+        <div>
+          <h3 class="font-semibold text-lg text-gray-800 mb-2">
+            Numbers at Even Indices:
+          </h3>
+          <p
+            id="evenIndices"
+            class="bg-gray-100 p-3 rounded-lg border border-gray-200 text-gray-700 font-mono overflow-auto"
+          ></p>
+        </div>
+        <div>
+          <h3 class="font-semibold text-lg text-gray-800 mb-2">
+            Numbers at Odd Indices:
+          </h3>
+          <p
+            id="oddIndices"
+            class="bg-gray-100 p-3 rounded-lg border border-gray-200 text-gray-700 font-mono overflow-auto"
+          ></p>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
